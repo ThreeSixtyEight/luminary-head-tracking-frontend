@@ -13,6 +13,54 @@
   }
 }
 
+.position::after, .position::before {
+  content: "";
+  background: rgba(255, 252, 255, 0.2);
+  border-radius: 2px;
+  position: absolute;
+}
+
+.position::after {
+  left: 30px;
+  width: 10px;
+  height: 20px;
+  box-shadow: 0 50px rgba(255, 252, 255, 0.2);
+}
+
+.position::before {
+  top: 30px;
+  width: 20px;
+  height: 10px;
+  box-shadow: 50px 0 rgba(255, 252, 255, 0.2);
+}
+.position.red::after, .position.red::before {
+  background: rgba(255, 0, 0, 0.9);
+}
+
+.position.red::after {
+  box-shadow: 0 50px rgba(255, 0, 0, 0.9);
+}
+
+.position.red::before {
+  box-shadow: 50px 0 rgba(255, 0, 0, 0.9);
+}
+
+.position {
+  position: absolute;
+  /* width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #61dafb; */
+  opacity: 1;
+  z-index: 1000;
+  display: block;
+  transition-property: left, top, width, height, background-color, opacity;
+  transition-duration: .2s;
+  transition-delay: 0s;
+}
+
+
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -35,4 +83,10 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.delay {
+  transition-property: left, top, width, height, background-color, opacity;
+  transition-duration: 0.5s;
+  transition-delay: 0s;
 }
