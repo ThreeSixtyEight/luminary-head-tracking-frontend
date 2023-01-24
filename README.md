@@ -1,4 +1,4 @@
-# Luminary Perspective Tracking Frontend
+# Luminary Perspective Tracking Front End
 
 ## Available Scripts
 
